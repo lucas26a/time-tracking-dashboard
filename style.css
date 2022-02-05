@@ -202,7 +202,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    outline: 1px solid #fff;
   }
   .person__buttons {
     display: flex;
