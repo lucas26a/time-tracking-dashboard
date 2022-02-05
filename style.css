@@ -1,0 +1,225 @@
+:root {
+  
+  /* layout */
+  --mobile: 500px;
+  --desktop: 1440px;
+
+  /* typography */
+  --card-title: 18px;
+  --font-family: 'Rubik', sans-serif;
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+
+  /* primary */
+  --person: hsl(246, 80%, 60%);
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+
+  /* neutral */  
+  --darker-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desatured-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+}
+
+*, 
+::before, 
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--darker-blue);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block: 1rem;
+}
+.dashboard { 
+  margin-inline: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .5rem;
+  justify-items: center;
+}
+
+.dashboard > div {
+  width: 100%;
+  width: 340px;
+  border-radius: 15px;
+  color: var(--pale-blue);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.dashboard > :not(.person)::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  background-position: right;
+}
+.dashboard > div > div {
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+.person {
+  background-color: var(--dark-blue); 
+  grid-row: auto;
+}
+.person__card {
+  background-color: var(--person);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 70%;
+}
+.person__card img {
+  width: 64px;
+  height: 64px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+.person__card .card__name {
+  font-size: 27px;
+  font-weight: var(--light);
+  color: #fff;
+}
+.person__buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+}
+.person__buttons > button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  color: var(--desatured-blue);
+  cursor: pointer;
+}
+.person__buttons .selected {
+  color: var(--pale-blue);
+}
+.work {
+  background-image: linear-gradient(to bottom, var(--work) 50%, var(--dark-blue));
+}
+.work::before {
+  background-image: url("./images/icon-work.svg");
+}
+.play {
+  background-image: linear-gradient(to bottom, var(--play) 50%, var(--dark-blue));
+}
+.play::before {
+  background-image: url("./images/icon-play.svg");
+}
+.study {
+  background-image: linear-gradient(to bottom, var(--study) 50%, var(--dark-blue));
+}
+.study::before {
+  background-image: url("./images/icon-study.svg");
+}
+.exercise {
+  background-image: linear-gradient(to bottom, var(--exercise) 50%, var(--dark-blue));
+}
+.exercise::before {
+  background-image: url("./images/icon-exercise.svg");
+}
+.social {
+  background-image: linear-gradient(to bottom, var(--social) 50%, var(--dark-blue));
+}
+.social::before {
+  background-image: url("./images/icon-social.svg");
+}
+.self-care {
+  background-image: linear-gradient(to bottom, var(--self-care) 50%, var(--dark-blue));
+}
+.self-care::before {
+  background-image: url("./images/icon-self-care.svg");
+}
+
+.content {
+  background-color: var(--dark-blue);
+}
+.content__block {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.title-block, .time-block {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-block .title {
+  font-size: var(--card-title);
+  color: #fff;
+}
+.time-block .curr-time {
+  font-size: 30px;
+  font-weight: var(--light);
+  color: #fff;
+}
+.time-block {
+  column-gap: 3rem;
+}
+@media screen and (min-width: 1200px) {
+  body {
+    height: 100vh;
+  }
+  .dashboard {
+    grid-template-columns: 20% repeat(3, 1fr);
+  }
+  .dashboard > div {
+    width: 280px;
+  }
+  .time-block {
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+  }
+  .dashboard .person {
+    grid-row: span 2;
+    width: 100%;
+  }
+  .person__card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    outline: 1px solid #fff;
+  }
+  .person__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.attribution { 
+  position: absolute;
+  font-size: 14px; 
+  bottom: 8px;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+  transition: color 75ms ease;
+}
+.attribution a:hover {
+  color: var(--play)
+}
