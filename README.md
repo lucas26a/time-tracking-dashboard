@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/lucas26a/time-tracking-dashboard/)
+- Live Site URL: [Netlify](https://bad-timetrackingdashboard.netlify.app/)
 
 ### Built with
 
@@ -39,16 +39,16 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-### Useful resources
+<!-- ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept. -->
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [GitHub](https://github.com/lucas26a)
+- Frontend Mentor - [@lucas26a](https://www.frontendmentor.io/profile/lucas26a)
+- Twitter - [@lucas26almeida](https://www.twitter.com/lucas26almeida)
 
 
 
